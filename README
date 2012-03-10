@@ -1,3 +1,9 @@
 Installation:
 
     To install, clone the repository locally and execute the install.sh script.
+
+Adding new modules:
+
+    To add a module use git submodule add so the files are updated properly.  To do this, from the .vim dir:
+
+    git submodule add {repo url} bundle/{module_name}
