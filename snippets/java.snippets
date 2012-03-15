@@ -1,13 +1,7 @@
-#===================================================================
-# Modifications by Leandro Pincini < leandropincini@gmail.com >
-#====================================================================
 snippet main
 	public static void main (String [] args) {
 		${1:/* code */}
 	}
-#====================================================================
-# End of Modifications
-#====================================================================
 snippet pu
 	public
 snippet po
@@ -81,11 +75,13 @@ snippet cos
 	static public final String ${1:var} = "${2}";${3}
 snippet as
 	assert ${1:test} : "${2:Failure message}";${3}
-#====================================================================
-# Added by Leandro Pincini < leandropincini@gmail.com >
+
+
+
+# 
+# EJB 3 snippets
 #
-#  Play framework's snippets session 
-#====================================================================
+
 snippet mm
 	@ManyToMany
 	${1}
@@ -98,6 +94,14 @@ snippet om
 snippet oo
 	@OneToOne
 	${1}
+
+# 
+# end EJB 3 snippets
+#
+
+# 
+#  Play framework snippets
+#
 snippet action
 	public static void ${1:index}(${2:args}) { ${3} }
 snippet before
@@ -135,10 +139,27 @@ snippet unless
 	(unless=${1:param});${2}
 snippet warn
 	Logger.warn(${1:param});${2}
-#====================================================================
-#  End of Play framework's snippets session 
-#====================================================================
-snippet joe
-	This is a conflict
-snippet another
-	another conflict
+snippet model
+	package models;
+
+	import play.db.jpa.Model;
+
+	@Entity
+	public class `Filename()` extends Model {
+		${1:/* code */}
+	}
+snippet controller
+	package controllers;
+
+	import play.mvc.Controller
+
+	public class `Filename()` extends Controller {
+
+		public static void index() {
+			render()
+		}
+	}
+
+#
+# End Play snippets
+#
