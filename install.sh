@@ -1,5 +1,5 @@
 
-sudo apt-get install ctags
+sudo apt-get install ctags php5-xdebug
 
 dirname=`pwd`
 cd ..
@@ -23,3 +23,11 @@ mkdir autoload
 ln -s ~/.vim/bundle/pathogen/autoload/pathogen.vim ~/.vim/autoload/pathogen.vim
 
 echo "VIM setup complete"
+
+echo "To finish the XDebug setup, copy and paste the following into the php config file for your system "
+echo "zend_extension = /usr/lib/php5/20060613+lfs/xdebug.so
+xdebug.remote_enable = 1
+xdebug.remote_port = 9000
+xdebug.remote_host = localhost"
+
+echo "For more xdebug info, go to http://developers.blog.box.com/2007/06/20/how-to-debug-php-with-vim-and-xdebug-on-linux/"
