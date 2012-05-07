@@ -84,7 +84,7 @@ set completeopt=menuone,longest,preview
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
 "Fuzzy Finder
-nnoremap <C-f><C-f> :FufFile<CR>
+nnoremap <C-S-r> :FuzzyFinderFile \*\*/<CR>
 
 " Add the virtualenv's site-packages to vim path
 python << EOF
