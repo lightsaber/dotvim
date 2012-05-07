@@ -12,7 +12,10 @@ filetype plugin indent on
 " Set the Map Leader
 let mapleader=","
 
-colorscheme evening
+set background=dark
+set t_Co=16
+let g:solarized_termcolors=16
+colorscheme solarized
 
 "editor options
 set number
@@ -47,6 +50,7 @@ set foldlevel=2
 "map <c-k> <c-w>k
 "map <c-l> <c-w>l
 "map <c-h> <c-w>h
+map <c-s-r> :Ack!
 
 " Set the Window Size
 if has("gui_running")
