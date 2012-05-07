@@ -50,22 +50,16 @@ set foldlevel=2
 "map <c-k> <c-w>k
 "map <c-l> <c-w>l
 "map <c-h> <c-w>h
-map <c-s-r> :Ack!
+map <leader>a :Ack!
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " Set the Window Size
-if has("gui_running")
-    set lines=50 columns=100
-else
-    if exists("+lines")
-        set lines=50
-    endif
-    if exists("+columns")
-        set columns=100
-    endif
-endif
+"if has("gui_running")
+"else
+"endif
  
 " Bind F6 to CTAGS
-nnoremap <F6> :!/opt/local/bin/ctags -R --python-kinds=-i *.py<CR>
+nnoremap <F6> :!/usr/bin/ctags -R --python-kinds=-i *.py<CR>
 
 " Mapping for Tasklist
 map <leader>td <Plug>TaskList
