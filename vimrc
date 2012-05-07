@@ -12,7 +12,11 @@ filetype plugin indent on
 " Set the Map Leader
 let mapleader=","
 
-colorscheme evening
+
+set background=dark
+set t_Co=16
+let g:solarized_termcolors=16
+colorscheme solarized
 
 "editor options
 set number

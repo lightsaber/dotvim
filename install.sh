@@ -2,14 +2,14 @@
 sudo apt-get install ctags
 
 dirname=`pwd`
-if [ -f ~/.vimrc -a ! -h ~/.vimrc ]; then 
+if [ -e ~/.vimrc -a ! -h ~/.vimrc ]; then 
    echo "You already have a .vimrc specified.  Make sure you have updated the vimrc in this repository with anything you want to retain and delete the one in your home directory."
    diff vimrc ~/.vimrc
    exit 1
 fi
 echo "... installing vim directory"
-if [ ! -e ~/.vim ]; then
-    mkdir ~/.vim
+if [ -e ~/.vim ]; then
+    mv ~/.vim ~/oldvim_$(date +%Y%m%d)
 fi
 
 cp -r $dirname ~/.vim
