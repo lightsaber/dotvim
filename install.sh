@@ -26,5 +26,4 @@ echo "... configuring pathogen"
 mkdir autoload
 ln -s ~/.vim/bundle/pathogen/autoload/pathogen.vim ~/.vim/autoload/pathogen.vim
 
-rm -rf .git
 echo "VIM setup complete"
