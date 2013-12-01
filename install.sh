@@ -1,5 +1,9 @@
 
-sudo apt-get install ctags
+if [ "$(uname -v | grep 'Ubuntu')" ]; then 
+    sudo apt-get install ctags
+elif [ "$(uname -s | grep 'Darwin')" ]; then 
+    brew install ctags
+fi
 
 dirname=`pwd`
 if [ -f ~/.vimrc -a ! -h ~/.vimrc ]; then 
